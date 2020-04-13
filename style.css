@@ -1,0 +1,139 @@
+:root{
+    --clr-lgt:#fff0f597 ;
+    --clr-drk: #363636;
+    --clr-accent:#af460f;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ffa41b;
+    color: var(--clr-drk);
+    font-family: 'Poppins', sans-serif;
+
+}
+
+header{
+    font-size: 1.25rem;
+}
+header, form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+}
+form input, form button{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    background-color: white;
+}
+
+form button{
+    color: var(--clr-accent);
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+form button:hover{
+    background:var(--clr-accent);
+    color: white;
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+.todo{
+    margin: .5em;
+    background-color: white;
+    color:var(--clr-drk);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+.todo li{
+    flex: 1;
+
+}
+
+.trash-btn , .complete-btn{
+    background:red;
+    color: wheat;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1rem;
+
+}
+.complete-btn{
+    background: green;
+}
+
+.todo-item{
+    padding: 0 0.5rem;
+}
+
+/* //we are unable the pointer event here for these classes */
+.fa-trash , .fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0; 
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    color: var(--clr-accent);
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background:var(--clr-accent);
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    color: aliceblue;
+}
+
+.select:hover::after{
+    color: var(--clr-accent);
+    background: white;
+}
